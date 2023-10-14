@@ -66,7 +66,7 @@ local StructureTree = Object(ui.Tree)
 function StructureTree:constructor(parent, database, ...)
   super(self).constructor(self, parent, {}, ...)
   self.tables = "Tables"
-  self.indices = "Indices"
+  self.indices = "Indixes"
   self.views = "Views"
   self.triggers = "Trigger"
   self:update(database)
