@@ -46,8 +46,8 @@ function sqlcommand.getAllViews(source)
   return allNames
 end
 
--- Gets all indices of the database.
-function sqlcommand.getAllIndices(source)
+-- Gets all indexes of the database.
+function sqlcommand.getAllIndexes(source)
   assert(isDatabase(source), ERRORMESSAGE.notdatabase .. "source")
 
   local allNames = {}
@@ -182,11 +182,11 @@ function sqlcommand.countAllViews(source)
   return totalViews["count(*)"]
 end
 
--- Counts alle indices of the database.
-function sqlcommand.countAllIndices(source)
+-- Counts alle indexes of the database.
+function sqlcommand.countAllIndexes(source)
   assert(isDatabase(source), ERRORMESSAGE.notdatabase .. "source")
-  local totalIndices = source:exec("SELECT count(*) FROM sqlite_master WHERE type='index' AND name NOT LIKE 'sqlite_%';")
-  return totalIndices["count(*)"]
+  local totalIndexes = source:exec("SELECT count(*) FROM sqlite_master WHERE type='index' AND name NOT LIKE 'sqlite_%';")
+  return totalIndexes["count(*)"]
 end
 
 -- Counts alle triggers of the database.

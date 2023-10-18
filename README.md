@@ -15,7 +15,7 @@ The module provides the following sqlite objects:
 
 | Name | Description | Module |
 | --- | --- | --- |
-| StructureTree | Represents a tree control that shows alltables, indixes, views and triggers of a database. | uisqldatabase.lua
+| StructureTree | Represents a tree control that shows alltables, indexes, views and triggers of a database. | uisqldatabase.lua
 | TableCombobox | Represents a combobox control that shows all tables of a database. | uisqltable.lua
 | TableList | Represents a list control that shows all tables of a database. | uisqltable.lua
 | TableStatementEdit | Represents a edit control that shows the sql statement of a sepcific table. | uisqltable.lua

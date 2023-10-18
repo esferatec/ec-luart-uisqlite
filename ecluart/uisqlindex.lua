@@ -15,7 +15,7 @@ end
 
 -- Updates the index combobox items.
 function IndexCombobox:update(database)
-    self.items = sqlcommand.getAllIndices(database)
+    self.items = sqlcommand.getAllIndexes(database)
 end
 
 -- Initializes a new index combobox instance.
@@ -34,7 +34,7 @@ end
 
 -- Updates the index list items.
 function IndexList:update(database)
-    self.items = sqlcommand.getAllIndices(database)
+    self.items = sqlcommand.getAllIndexes(database)
 end
 
 -- Initializes a new index list instance.

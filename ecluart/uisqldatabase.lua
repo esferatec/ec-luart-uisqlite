@@ -66,7 +66,7 @@ local StructureTree = Object(ui.Tree)
 function StructureTree:constructor(parent, database, ...)
   super(self).constructor(self, parent, {}, ...)
   self.tables = "Tables"
-  self.indices = "Indixes"
+  self.indexes = "Indexes"
   self.views = "Views"
   self.triggers = "Trigger"
   self:update(database)
@@ -79,8 +79,8 @@ function StructureTree:update(database)
   header = self:add(self.tables .. " (" .. sqlcommand.countAllTables(database) .. ")")
   header.subitems = sqlcommand.getAllTables(database)
 
-  header = self:add(self.indices .. " (" .. sqlcommand.countAllIndices(database) .. ")")
-  header.subitems = sqlcommand.getAllIndices(database)
+  header = self:add(self.indexes .. " (" .. sqlcommand.countAllIndexes(database) .. ")")
+  header.subitems = sqlcommand.getAllIndexes(database)
 
   header = self:add(self.views .. " (" .. sqlcommand.countAllViews(database) .. ")")
   header.subitems = sqlcommand.getAllViews(database)
